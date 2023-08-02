@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:ojakgyo/widgets/list_card.dart';
 
 void main() {
   runApp(const App());
@@ -27,13 +26,6 @@ class _AppState extends State<App> {
               children: const [
                 SizedBox(
                   height: 60,
-                ),
-                ListCard(
-                  tranState: '거래중',
-                  tranDate: '2023.08.02 16:52',
-                  tranPerson: '손후추',
-                  tranItem: '노트북',
-                  tranPrice: '100,000원',
                 ),
               ],
             ),
