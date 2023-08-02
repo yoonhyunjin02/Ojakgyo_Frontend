@@ -1,7 +1,20 @@
 import 'package:flutter/material.dart';
 
 class ListCard extends StatefulWidget {
-  const ListCard({super.key});
+  const ListCard({
+    Key? key,
+    required this.tranState, // 거래 상태
+    required this.tranDate, // 거래 날짜
+    required this.tranPerson, // 거래 대상
+    required this.tranItem, // 거래 품목
+    required this.tranPrice, // 거래 가격
+  }) : super(key: key);
+
+  final String tranState;
+  final String tranDate;
+  final String tranPerson;
+  final String tranItem;
+  final String tranPrice;
 
   @override
   State<ListCard> createState() => _AppState();
@@ -18,34 +31,34 @@ class _AppState extends State<ListCard> {
       child: Padding(
         padding: const EdgeInsets.all(30),
         child: Column(
-          children: const [
+          children: [
             Text(
-              '거래 상태',
-              style: TextStyle(
+              widget.tranState,
+              style: const TextStyle(
                 color: Colors.white,
               ),
             ),
             Text(
-              '거래 날짜',
-              style: TextStyle(
+              widget.tranDate,
+              style: const TextStyle(
                 color: Colors.white,
               ),
             ),
             Text(
-              '거래자',
-              style: TextStyle(
+              widget.tranPerson,
+              style: const TextStyle(
                 color: Colors.white,
               ),
             ),
             Text(
-              '거래 상품',
-              style: TextStyle(
+              widget.tranItem,
+              style: const TextStyle(
                 color: Colors.white,
               ),
             ),
             Text(
-              '거래 가격',
-              style: TextStyle(
+              widget.tranPrice,
+              style: const TextStyle(
                 color: Colors.white,
               ),
             ),
