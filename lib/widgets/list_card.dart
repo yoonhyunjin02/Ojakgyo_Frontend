@@ -23,99 +23,124 @@ class ListCard extends StatefulWidget {
 class _AppState extends State<ListCard> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: const Color(0xFF1F2123),
-        borderRadius: BorderRadius.circular(20),
-      ),
-      child: Padding(
-        padding: const EdgeInsets.all(30),
-        child: Column(
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    return Column(
+      children: [
+        Container(
+          decoration: BoxDecoration(
+            color: const Color(0xFFD8E8E9),
+            borderRadius: BorderRadius.circular(20),
+          ),
+          child: Padding(
+            padding: const EdgeInsets.all(30),
+            child: Column(
               children: [
-                Text(
-                  widget.tranDate,
-                  style: const TextStyle(
-                    color: Colors.white,
-                  ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      widget.tranDate,
+                      style: const TextStyle(
+                        color: Color.fromARGB(221, 53, 53, 53),
+                        fontSize: 17,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                    Row(
+                      children: [
+                        Icon(
+                          Icons.circle,
+                          size: 12,
+                          color: widget.tranState == '거래중'
+                              ? const Color(0xFFE46F2A)
+                              : const Color(0xFF00ADC2),
+                        ),
+                        const SizedBox(
+                          width: 5,
+                        ),
+                        Text(
+                          widget.tranState,
+                          style: const TextStyle(
+                            color: Color.fromARGB(221, 53, 53, 53),
+                            fontSize: 17,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 7,
                 ),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    const Icon(
-                      Icons.circle,
-                      size: 12,
-                      color: Colors.white,
-                    ),
-                    const SizedBox(
-                      width: 5,
-                    ),
                     Text(
-                      widget.tranState,
+                      widget.tranItem,
                       style: const TextStyle(
-                        color: Colors.white,
+                        color: Color.fromARGB(221, 32, 32, 32),
+                        fontSize: 27,
+                        fontWeight: FontWeight.w900,
                       ),
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 7,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Row(
+                      children: [
+                        const Icon(
+                          Icons.person,
+                          color: Color.fromARGB(221, 53, 53, 53),
+                          size: 20,
+                        ),
+                        const SizedBox(
+                          width: 3,
+                        ),
+                        Text(
+                          widget.tranPerson,
+                          style: const TextStyle(
+                            color: Color.fromARGB(221, 53, 53, 53),
+                            fontSize: 17,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        const Icon(
+                          Icons.attach_money,
+                          color: Color.fromARGB(221, 53, 53, 53),
+                          size: 20,
+                        ),
+                        const SizedBox(
+                          width: 3,
+                        ),
+                        Text(
+                          widget.tranPrice,
+                          style: const TextStyle(
+                            color: Color.fromARGB(221, 53, 53, 53),
+                            fontSize: 17,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                      ],
                     ),
                   ],
                 ),
               ],
             ),
-            const SizedBox(
-              height: 10,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Text(
-                  widget.tranItem,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 25,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ],
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(
-                  children: [
-                    const Icon(
-                      Icons.person,
-                      color: Colors.white,
-                    ),
-                    Text(
-                      widget.tranPerson,
-                      style: const TextStyle(
-                        color: Colors.white,
-                      ),
-                    ),
-                  ],
-                ),
-                Row(
-                  children: [
-                    const Icon(
-                      Icons.attach_money,
-                      color: Colors.white,
-                    ),
-                    Text(
-                      widget.tranPrice,
-                      style: const TextStyle(
-                        color: Colors.white,
-                      ),
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          ],
+          ),
         ),
-      ),
+        const SizedBox(
+          height: 20,
+        )
+      ],
     );
   }
 }
