@@ -31,7 +31,7 @@ class _AppState extends State<ListCard> {
             borderRadius: BorderRadius.circular(20),
           ),
           child: Padding(
-            padding: const EdgeInsets.all(30),
+            padding: const EdgeInsets.all(26),
             child: Column(
               children: [
                 Row(
@@ -41,7 +41,7 @@ class _AppState extends State<ListCard> {
                       widget.tranDate,
                       style: const TextStyle(
                         color: Color.fromARGB(221, 53, 53, 53),
-                        fontSize: 17,
+                        fontSize: 16,
                         fontWeight: FontWeight.w500,
                       ),
                     ),
@@ -61,7 +61,7 @@ class _AppState extends State<ListCard> {
                           widget.tranState,
                           style: const TextStyle(
                             color: Color.fromARGB(221, 53, 53, 53),
-                            fontSize: 17,
+                            fontSize: 16,
                             fontWeight: FontWeight.w500,
                           ),
                         ),
@@ -78,8 +78,8 @@ class _AppState extends State<ListCard> {
                     Text(
                       widget.tranItem,
                       style: const TextStyle(
-                        color: Color.fromARGB(221, 32, 32, 32),
-                        fontSize: 27,
+                        color: Color.fromARGB(221, 21, 21, 21),
+                        fontSize: 23,
                         fontWeight: FontWeight.w900,
                       ),
                     ),
@@ -105,7 +105,7 @@ class _AppState extends State<ListCard> {
                           widget.tranPerson,
                           style: const TextStyle(
                             color: Color.fromARGB(221, 53, 53, 53),
-                            fontSize: 17,
+                            fontSize: 16,
                             fontWeight: FontWeight.w500,
                           ),
                         ),
@@ -125,7 +125,7 @@ class _AppState extends State<ListCard> {
                           widget.tranPrice,
                           style: const TextStyle(
                             color: Color.fromARGB(221, 53, 53, 53),
-                            fontSize: 17,
+                            fontSize: 16,
                             fontWeight: FontWeight.w500,
                           ),
                         ),
