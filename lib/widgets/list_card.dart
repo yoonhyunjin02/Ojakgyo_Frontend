@@ -32,35 +32,86 @@ class _AppState extends State<ListCard> {
         padding: const EdgeInsets.all(30),
         child: Column(
           children: [
-            Text(
-              widget.tranState,
-              style: const TextStyle(
-                color: Colors.white,
-              ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  widget.tranDate,
+                  style: const TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+                Row(
+                  children: [
+                    const Icon(
+                      Icons.circle,
+                      size: 12,
+                      color: Colors.white,
+                    ),
+                    const SizedBox(
+                      width: 5,
+                    ),
+                    Text(
+                      widget.tranState,
+                      style: const TextStyle(
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
             ),
-            Text(
-              widget.tranDate,
-              style: const TextStyle(
-                color: Colors.white,
-              ),
+            const SizedBox(
+              height: 10,
             ),
-            Text(
-              widget.tranPerson,
-              style: const TextStyle(
-                color: Colors.white,
-              ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Text(
+                  widget.tranItem,
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
             ),
-            Text(
-              widget.tranItem,
-              style: const TextStyle(
-                color: Colors.white,
-              ),
+            const SizedBox(
+              height: 10,
             ),
-            Text(
-              widget.tranPrice,
-              style: const TextStyle(
-                color: Colors.white,
-              ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Row(
+                  children: [
+                    const Icon(
+                      Icons.person,
+                      color: Colors.white,
+                    ),
+                    Text(
+                      widget.tranPerson,
+                      style: const TextStyle(
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
+                ),
+                Row(
+                  children: [
+                    const Icon(
+                      Icons.attach_money,
+                      color: Colors.white,
+                    ),
+                    Text(
+                      widget.tranPrice,
+                      style: const TextStyle(
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
             ),
           ],
         ),
