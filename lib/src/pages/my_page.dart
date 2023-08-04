@@ -20,6 +20,10 @@ class _AppState extends State<MyPage> {
               decoration: const BoxDecoration(
                 color: Color(0xFF23225C),
               ),
+              child: const Text(
+                '마이페이지임',
+                style: TextStyle(color: Colors.white),
+              ),
             ),
           ],
         ),

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:ojakgyo/src/pages/my_page.dart';
+import 'package:ojakgyo/src/pages/main_page.dart';
 
-//MainPage(userName: '윤현진',),
+// MainPage(userName: '윤현진',),
+// MyPage(),
 
 void main() {
   runApp(const App());
@@ -18,7 +19,9 @@ class _AppState extends State<App> {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: MyPage(),
+      home: MainPage(
+        userName: '윤현진',
+      ),
     );
   }
 }
