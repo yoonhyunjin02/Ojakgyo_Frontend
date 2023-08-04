@@ -155,6 +155,13 @@ class _AppState extends State<MainPage> {
                       tranItem: '맥북',
                       tranPrice: '1,500,000원',
                     ),
+                    const ListCard(
+                      tranState: '거래완료',
+                      tranDate: '2023.08.04 19:00',
+                      tranPerson: '이오정',
+                      tranItem: '닌텐도 스위치 + 동물의 숲 칩',
+                      tranPrice: '210,000원',
+                    ),
                   ],
                 ),
               ),

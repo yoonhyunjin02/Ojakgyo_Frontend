@@ -1,28 +1,20 @@
 import 'package:flutter/material.dart';
 
-class BackNavBar extends StatelessWidget {
+class BackNavBar extends StatelessWidget with PreferredSizeWidget {
   const BackNavBar({super.key});
 
   @override
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
+
+  @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        decoration: const BoxDecoration(
-          color: Color(0xFF23225C),
-        ),
-        height: 60,
-        child: Padding(
-          padding: const EdgeInsets.all(15),
-          child: Row(
-            children: const [
-              Icon(
-                Icons.arrow_back_ios_new,
-                color: Colors.white,
-                size: 27,
-              )
-            ],
-          ),
-        ),
+    return AppBar(
+      backgroundColor: const Color(0xFF23225C),
+      leading: IconButton(
+        onPressed: () {
+          Navigator.pop(context);
+        },
+        icon: const Icon(Icons.arrow_back_ios),
       ),
     );
   }
