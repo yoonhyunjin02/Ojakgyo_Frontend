@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ojakgyo/widgets/back_navbar.dart';
+import 'package:ojakgyo/widgets/my_page_btn.dart';
 
 class MyPage extends StatefulWidget {
   const MyPage({super.key});
@@ -65,6 +66,32 @@ class _AppState extends State<MyPage> {
             ),
             const SizedBox(
               height: 25,
+            ),
+            for (var btnType in [
+              '로그아웃',
+              '회원 탈퇴',
+              '내 정보 수정',
+              '간이계약서 조회',
+              '자주 묻는 질문',
+              '비밀번호 변경'
+            ])
+              MyPageBtn(
+                btnType: btnType,
+              ),
+            const SizedBox(
+              height: 160,
+            ),
+            Container(
+              height: 1.0,
+              color: Colors.black87,
+            ),
+            const SizedBox(
+              height: 24,
+            ),
+            Image.asset(
+              'assets/images/logo.png',
+              height: 70,
+              width: 150,
             ),
           ],
         ),
