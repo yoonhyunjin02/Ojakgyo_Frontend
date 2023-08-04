@@ -12,12 +12,13 @@ class BackNavBar extends StatelessWidget {
         ),
         height: 60,
         child: Padding(
-          padding: const EdgeInsets.all(10),
+          padding: const EdgeInsets.all(15),
           child: Row(
             children: const [
               Icon(
                 Icons.arrow_back_ios_new,
                 color: Colors.white,
+                size: 27,
               )
             ],
           ),
