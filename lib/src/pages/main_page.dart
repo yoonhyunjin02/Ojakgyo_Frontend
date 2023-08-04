@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ojakgyo/src/pages/my_page.dart';
 import 'package:ojakgyo/widgets/list_card.dart';
 
 class MainPage extends StatefulWidget {
@@ -39,53 +40,63 @@ class _AppState extends State<MainPage> {
                         height: 80,
                         width: 170,
                       ),
-                      Container(
-                        decoration: BoxDecoration(
-                          color: const Color(0xFFD8E8E9),
-                          borderRadius: BorderRadius.circular(20),
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(26),
-                          child: Column(
-                            children: [
-                              Image.asset(
-                                'assets/images/profile1_img.png',
-                                height: 140,
-                                width: 140,
-                              ),
-                              const SizedBox(
-                                height: 15,
-                              ),
-                              const Text(
-                                '환영합니다!',
-                                style: TextStyle(
-                                  color: Color.fromARGB(221, 21, 21, 21),
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w600,
+                      InkWell(
+                        onTap: () => {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const MyPage()),
+                          )
+                        },
+                        child: Container(
+                          // 프로필 창
+                          decoration: BoxDecoration(
+                            color: const Color(0xFFD8E8E9),
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(26),
+                            child: Column(
+                              children: [
+                                Image.asset(
+                                  'assets/images/profile1_img.png',
+                                  height: 140,
+                                  width: 140,
                                 ),
-                              ),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Text(
-                                    widget.userName,
-                                    style: const TextStyle(
-                                      color: Color.fromARGB(221, 21, 21, 21),
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.w500,
-                                    ),
+                                const SizedBox(
+                                  height: 15,
+                                ),
+                                const Text(
+                                  '환영합니다!',
+                                  style: TextStyle(
+                                    color: Color.fromARGB(221, 21, 21, 21),
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w600,
                                   ),
-                                  const Text(
-                                    '님',
-                                    style: TextStyle(
-                                      color: Color.fromARGB(221, 21, 21, 21),
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.w500,
+                                ),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      widget.userName,
+                                      style: const TextStyle(
+                                        color: Color.fromARGB(221, 21, 21, 21),
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w500,
+                                      ),
                                     ),
-                                  ),
-                                ],
-                              ),
-                            ],
+                                    const Text(
+                                      '님',
+                                      style: TextStyle(
+                                        color: Color.fromARGB(221, 21, 21, 21),
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ),

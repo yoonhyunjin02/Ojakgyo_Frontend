@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:ojakgyo/widgets/back_navbar.dart';
 
+// MainPage(userName: '윤현진',),
+// MyPage(),
+
 void main() {
   runApp(const App());
 }
