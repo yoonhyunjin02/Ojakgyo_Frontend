@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ojakgyo/widgets/back_navbar.dart';
+import 'package:ojakgyo/src/pages/main_page.dart';
 
 // MainPage(userName: '윤현진',),
 // MyPage(),
@@ -19,7 +19,9 @@ class _AppState extends State<App> {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: BackNavBar(),
+      home: MainPage(
+        userName: '윤현진',
+      ),
     );
   }
 }
